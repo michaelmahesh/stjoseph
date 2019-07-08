@@ -1,0 +1,37 @@
+clc; clear all; close all;
+t = -2 : 1: 2;
+y = [zeros(1,2) ,ones(1,1) ,zeros(1,2)];
+subplot(3,3,1); stem(t,y);
+title('UNIT IMPULSE');ylabel('Amplitude---->') ;xlabel(' (a)n---->');
+% PROGRAM FOR GENERATION OF UNIT STEP SEQUENCE [u(n)-u(n-N)
+n = input ('Enter the N Value: ');
+t= 0 : 1: n-1;
+y1 = ones(1,n);
+subplot (3,3,2); stem (t, y1) ;
+title('UNIT STEP');ylabel( 'AMPLITUDE---->'); xlabel('(b)n---->');
+% PROGRAM FOR GENERATION OF RAMP SEQUENCE
+N1= input ('Enter the Length of Ramp Sequence: ');
+t = 0 : N1;
+subplot(3,3,3);stem(t,t);
+title('RAMP SEQUENCE');
+ylabel( 'AMPLITUDE--->'); xlabel(' (c)n----> ');
+% PROGRAM FOR GENERATION OF EXPONENTIAL SEQUENCE
+n2 = input(' Enter the Length of Exponential Sequence:');
+t = 0 : n2;
+a = input ('Enter the Value:');
+y2 = exp(a*t);
+subplot(3,3,4);stem(t,y2);
+title('EXPONENTIAL SEQUENCE');
+ylabel( 'AMPLITUDE----->'); xlabel(' (d)n-----> ');
+% PROGRAM FOR GENERATION OF SINE SEQUENCE
+t = 0:.01:pi;
+y = sin(2*pi*t);
+subplot(3,3,5);plot(t,y);
+title('SINE WAVE');ylabel( 'AMPLITUDE----->'); xlabel(' (a)t----->');
+% PROGRAM FOR GENERATION OF COSINE SEQUENCE
+t = 0:.01:pi;
+y = cos(2*pi*t);
+subplot(3,3,6);
+plot(t,y);
+title('COS WAVE');ylabel( 'AMPLITUDE------>');
+xlabel (' (b) t----->') ;
